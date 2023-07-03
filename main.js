@@ -82,7 +82,6 @@ function addToFavorite(id) {
   if (list.some((movie) => movie.id === id)) {
     return alert('此電影已經在收藏清單中！')
   }
-  alert(`將${movie.title}放進最愛清單~~`)
   list.push(movie)
   localStorage.setItem('favoriteMovies', JSON.stringify(list))
 }
