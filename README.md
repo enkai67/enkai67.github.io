@@ -1,5 +1,5 @@
 # enkai67.github.io
-MovirList
+MovieList
 # Movie List
 A simple web application for movie fanatic
 
