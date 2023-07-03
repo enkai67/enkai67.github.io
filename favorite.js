@@ -34,6 +34,7 @@ dataPanel.addEventListener('click', (event) => {
   if (event.target.matches('.btn-show-movie')) {
     showMovieModal(Number(event.target.dataset.id))
   } else if (event.target.matches('.btn-remove-favorite')) {
+    alert('已從最愛清單移除')
     removeFromFavorite(Number(event.target.dataset.id))
   }
 })
