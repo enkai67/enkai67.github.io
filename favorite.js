@@ -20,7 +20,7 @@ function renderMovieList(data) {
         </div>
         <div class="card-footer">
           <button class="btn btn-primary btn-show-movie" data-bs-toggle="modal" data-bs-target="#movie-modal" data-id="${item.id}">More</button>
-          <button class="btn btn-danger btn-remove-favorite" data-id="${item.id}">X</button>
+          <button class="btn btn-danger btn-remove-favorite" data-id="${item.id}" data-title="${item.title}">X</button>
         </div>
       </div>
     </div>
@@ -34,8 +34,7 @@ dataPanel.addEventListener('click', (event) => {
   if (event.target.matches('.btn-show-movie')) {
     showMovieModal(Number(event.target.dataset.id))
   } else if (event.target.matches('.btn-remove-favorite')) {
-    alert('已從最愛清單移除')
-    removeFromFavorite(Number(event.target.dataset.id))
+    removeFromFavorite(Number(event.target.dataset.id), event.target.dataset.title)
   }
 })
 
@@ -57,10 +56,11 @@ function showMovieModal(id) {
 }
 
 //移除最愛清單
-function removeFromFavorite(id){
+function removeFromFavorite(id, title){
   if ( !movies || !movies.length ) return 
   console.log(movies)
   const movieIndex = movies.findIndex((movie) => movie.id === id)
+  alert(`已將${title}從最愛清單中移除`)
   console.log(movieIndex)
   if ( movieIndex === -1) return 
   movies.splice(movieIndex, 1)
