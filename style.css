@@ -1,0 +1,38 @@
+@media only screen and (max-width: 1024px){
+  #data-panel{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .col-sm-3{
+    min-width: 250px;
+    width: 250px;
+  }
+
+  img {
+    max-width: 300px;
+  }
+}
+
+a{
+  font-family: "Microsoft JhengHei", serif;
+}
+
+.form-control {
+  width: 300px;
+}
+
+#search-form {
+  display: flex;
+  justify-content: center;
+}
+
+.search-but {
+  max-width: 100px;
+}
+
+.search-type {
+  width: auto;
+}
+
