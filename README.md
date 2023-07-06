@@ -3,6 +3,7 @@ MovieList
 # Movie List
 A simple web application for movie fanatic
 
+project URL: https://enkai67.github.io/
 ## Features
 - listing movies from movie api
 - searching movies by title
